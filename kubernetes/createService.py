@@ -22,7 +22,12 @@ port = client.V1ServicePort(port=80)
 port.protocol = 'TCP'
 port.target_port = 8000
 #port.port = 80
-
+## Creating more Port objetcs
+##second_port = client.V1ServicePort(port=80)
+##second_port.protocol = 'TCP'
+##second_port.target_port = 8000
+## end
+##spec.ports = [port, second_port ]
 spec.ports = [ port ]
 spec.selector = {"app": "my-custom-app"}
 
