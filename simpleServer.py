@@ -18,7 +18,7 @@ def run():
   print('starting server...')
 
   PORT = 8081
-  server_address = ('127.0.0.1', PORT)
+  server_address = ('0.0.0.0', PORT)
   httpd = HTTPServer(server_address, testHTTPServer_RequestHandler)
   print('running server at port ', PORT)
   try:
