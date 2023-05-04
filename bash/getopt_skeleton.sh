@@ -3,7 +3,7 @@
 # Call getopt to validate the provided input. 
 options=$(getopt \
             -o a:b:c: \
-            --long option-a:,option-b:,option-c: -- |"$@")
+            --long option-a:,option-b:,option-c: -- "$@")
 
 if [ $# -eq 0 ]; then
     echo "No parameters provided"
