@@ -15,6 +15,12 @@ my_func2() {
   #echo "Bye!" # --> this cannot be added because it would be a correct command and the trap won't work, since last command was success.
 }
 
+my_func3() {
+  echo "Hi, I'm my_func3!"
+  mkdir tmp 2>> errors.txt
+  rm tmp 2>> errors.txt
+  echo "Bye!"
+}
 # Auxiliar:
 error() {
   local parent_lineno="$1"
@@ -33,5 +39,9 @@ error() {
 #my_func
 
 ## Using trap
-trap my_func2 0 1 2 3 6
-trap 'error ${LINENO}' ERR
+#trap my_func2 0
+#trap 'error ${LINENO}' ERR
+
+## Another trap example
+trap "echo Something went wrong; exit" 0
+my_func3
