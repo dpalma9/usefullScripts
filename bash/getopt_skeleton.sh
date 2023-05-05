@@ -3,7 +3,7 @@
 # Call getopt to validate the provided input. 
 options=$(getopt \
             -o a:b:c: \
-            --long option-a:,option-b:,option-c: -- "$@")
+            --long option-a:,option-b:,option-c:,test -- "$@")
 
 if [ $# -eq 0 ]; then
     echo "No parameters provided"
@@ -43,6 +43,11 @@ while true; do
         shift; # The arg is next in position args
         echo "Option c long"
         VAR=$1
+        ;;
+    --test)
+        shift;
+        echo "test"
+        VAR2="test"
         ;;
     -:)
         echo "$0: -$OPTARG needs a value" >&2;
