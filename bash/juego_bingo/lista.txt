@@ -1,0 +1,3 @@
+40 - Se nos pide desplegar un cluster para un proyecto nuevo y no tenemos definido del todo cómo va a ser el proyecto de principio a fin.
+31 - Mejorar es en comunicación: sabes qué hacen los demás. x2
+30 - No hemos tenido cuidado a la hora de tratar con los certificados.
